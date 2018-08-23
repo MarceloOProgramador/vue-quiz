@@ -9,17 +9,20 @@
 </template>
 
 <script>
+
 export default {
   created(){
     this.generateQuestion();
   },
+
   data ()  {
     return {
       ask : "Gerando pergunta...",
       result : 0,
-      reply : ""
+      reply : "",
     }
   },
+
   methods : {
 
     generateQuestion() {
@@ -52,6 +55,8 @@ export default {
         alert("Errou!");
 
       }
+
+      this.$emit("answerFnc")
     }
   }
 }

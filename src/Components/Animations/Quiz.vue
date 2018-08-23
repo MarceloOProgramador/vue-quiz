@@ -1,7 +1,10 @@
 <template>
   <div>
     <h2 v-text="title"></h2>
-    <question-component></question-component>
+    <component 
+      :is="mode"
+      @answerFnc="answerFnc">
+    </component>
   </div>
 </template>
 
@@ -10,11 +13,17 @@ import Question from "./Question"
 export default {
   data (){
     return {
-      title: "Quiz"
+      title: "Quiz",
+      mode: "question-component",
     }
   },
   components: {
     "question-component" : Question
+  },
+  methods:{
+    answerFnc () {
+      alert("I'M HERE!");
+    }
   }
 }
 </script>
