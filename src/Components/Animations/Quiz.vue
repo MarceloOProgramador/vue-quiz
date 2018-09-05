@@ -9,7 +9,9 @@
 </template>
 
 <script>
-import Question from "./Question"
+import Question from "./Question" 
+import successComponent from "./Answer/successComponent" 
+import errorComponent from "./Answer/errorComponent" 
 export default {
   data (){
     return {
@@ -18,11 +20,19 @@ export default {
     }
   },
   components: {
-    "question-component" : Question
+    "question-component" : Question,
+    "success-component" : successComponent,
+    "error-component" : errorComponent
   },
   methods:{
-    answerFnc () {
-      alert("I'M HERE!");
+    answerFnc (mode) {
+
+      if(mode == undefined){
+        this.mode = "question-component"
+      } else {
+        this.mode = mode
+      }
+
     }
   }
 }

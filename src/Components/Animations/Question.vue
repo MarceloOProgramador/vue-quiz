@@ -42,21 +42,15 @@ export default {
     },
     checkResult () {
 
+      let mode = "error-component"
+
       if (this.reply == this.result) {
 
-        alert("Acertou!!");
+        mode = "success-component";
 
-        this.generateQuestion();
+      } 
 
-        this.reply = "";
-
-      } else {
-
-        alert("Errou!");
-
-      }
-
-      this.$emit("answerFnc")
+      this.$emit("answerFnc", mode)
     }
   }
 }
