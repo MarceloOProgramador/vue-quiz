@@ -1,11 +1,17 @@
 <template>
+
   <div>
+
     <h2 v-text="title"></h2>
-    <component 
-      :is="mode"
-      @answerFnc="answerFnc">
-    </component>
+    
+    <transition name="rotation" mode="out-in">
+
+      <component :is="mode" @answerFnc="answerFnc"></component>
+
+    </transition>
+
   </div>
+
 </template>
 
 <script>
@@ -39,5 +45,29 @@ export default {
 </script>
   
 <style scoped>
+
+.rotation-leave-active{
+  animation: rotation-out 2.5s;
+}
+.rotation-enter-active{
+  animation: rotation-in 2.5s;
+}
+@keyframes rotation-out {
+  from{
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes rotation-in{
+  from{
+    transform: rotateY(90deg);
+  }
+  to{
+    transform: rotateY(0deg);
+  }
+}
 
 </style>
