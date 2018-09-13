@@ -1,6 +1,6 @@
 <template>
 
-  <div>
+  <div class="container">
 
     <h2 v-text="title"></h2>
     

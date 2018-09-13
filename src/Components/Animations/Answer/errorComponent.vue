@@ -1,8 +1,13 @@
 <template>
-  <div>
+
+  <div class="alert alert-danger">
+
     <h1>Errado!</h1>
-    <button @click="next"> Proxima </button>
+    
+    <button @click="next" class="btn btn-primary"> Proxima </button>
+
   </div>
+
 </template>
 
 <script>

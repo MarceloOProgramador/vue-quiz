@@ -1,10 +1,25 @@
 <template>
+
   <div>
-    <h2>{{ask}}</h2>
-    <form @submit.prevent="checkResult">
-      <input type="text" name="answer" id="answer" placeholder="Resultado" v-model="reply"/>
-      <button>Responder</button>
-    </form>
+
+    <div class="card-header">
+
+      <h2>{{ask}}</h2>
+
+    </div>
+    
+    <div class="card-body center">
+
+      <form @submit.prevent="checkResult" class="form-inline">
+
+        <input type="text" name="answer" id="answer" placeholder="Resultado" v-model="reply"/>
+
+        <button>Responder</button>
+
+      </form>
+
+    </div>
+
   </div>
 </template>
 

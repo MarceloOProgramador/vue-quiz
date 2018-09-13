@@ -1,7 +1,11 @@
 <template>
-  <div>
+
+  <div class="alert alert-success">
+
     <h1>Certo!</h1>
-    <button @click="next">Proxima</button>
+
+    <button @click="next" class="btn btn-primary">Proxima</button>
+
   </div>
 </template>
 
